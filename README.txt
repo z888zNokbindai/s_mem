@@ -1,13 +1,37 @@
-SINISTER MEMORY — Static HTML Game
+SINISTER MEMORY — ATMOSPHERE EDITION
+=====================================
 
-How to run:
-1. Keep all files and folders together.
-2. Double-click index.html.
-3. No web server or internet connection is required.
+วิธีเล่น
+1. แตกไฟล์ ZIP ให้เรียบร้อย
+2. ดับเบิลคลิก index.html
+3. ไม่ต้องใช้เว็บเซิร์ฟเวอร์และไม่ต้องเชื่อมต่ออินเทอร์เน็ต
 
-Controls:
-- Click/tap cards to reveal them.
-- Esc: pause/resume
-- M: mute/unmute
+โหมดเกม
+- 5 Pairs
+- 10 Pairs
+- 20 Pairs
+- Endless: เล่นต่อเนื่อง รอบลึกขึ้น จำนวนคู่และคำสาปเพิ่มขึ้น
 
-Progress and high scores are stored in your browser using localStorage.
+Endless Balanced Progression
+- รอบ 1-2 การ์ดจะไม่สลับตำแหน่งเมื่อเปิดผิด
+- รอบแรกเริ่มด้วยความเสียหาย 4 Sanity และเวลาแสดงการ์ดยาวขึ้น
+- รอบ 3-4 มีจำนวนครั้งเปิดผิดที่ได้รับการคุ้มกันก่อนเริ่มสุ่มสลับ
+- รอบ 3-8 สลับเพียงบางใบ ไม่รื้อการจดจำทั้งกระดาน
+- ตั้งแต่รอบ 9 จึงเริ่มมีโอกาสสลับการ์ดที่ยังไม่จับคู่ทั้งกระดาน
+- หลังจบรอบ 1-3 ฟื้น Sanity มากขึ้นเพื่อให้มีเวลาปรับตัว
+- ความเสียหาย ความถี่การสลับ เวลา Preview และ Score Decay จะเพิ่มอย่างเป็นขั้นตอน
+
+Dynamic Horror Atmosphere
+- เสียงกระซิบถูกสร้างด้วย Web Audio โดยไม่ใช้ไฟล์ภายนอก
+- เสียงหัวใจจะเร็วและดังขึ้นเมื่อ Sanity ลดลง
+- เงาร่างสุ่มเดินผ่านด้านหลังโต๊ะการ์ด
+- การ์ดที่ยังคว่ำอาจกระตุกและลืมตามองผู้เล่น
+- ไฟและหน้าจอจะกะพริบเมื่อความหวาดกลัวสูง
+- ภาพหน้าการ์ดบิดเบี้ยวตาม Sanity และความลึกของ Endless
+- ข้อความหลอนเปลี่ยนตามการเล่น การหยุดนิ่ง คอมโบ และจำนวนครั้งที่ผิด
+
+ปุ่มลัด
+- ESC: หยุดเกม
+- M: เปิด/ปิดเสียง
+
+ข้อมูล High Score, Codex และการตั้งค่าเสียงบันทึกใน localStorage ของเบราว์เซอร์
