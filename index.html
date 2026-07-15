@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#090807">
+  <title>Sinister Memory</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="vignette" aria-hidden="true"></div>
+  <div id="flash" aria-hidden="true"></div>
+  <div id="whisper" class="whisper" aria-live="polite"></div>
+
+  <main id="app">
+    <section id="menuScreen" class="screen menu-screen active" aria-labelledby="gameTitle">
+      <div class="sigil" aria-hidden="true"><span>✦</span></div>
+      <p class="eyebrow">THE FORBIDDEN DECK</p>
+      <h1 id="gameTitle">SINISTER<br><em>MEMORY</em></h1>
+      <p class="subtitle">Match the cursed relics before your mind is consumed.</p>
+
+      <div class="menu-panel">
+        <p class="panel-label">CHOOSE THE DEPTH</p>
+        <div class="mode-grid">
+          <button class="mode-btn" data-pairs="5"><strong>5</strong><span>PAIRS</span><small>Initiate</small></button>
+          <button class="mode-btn featured" data-pairs="10"><strong>10</strong><span>PAIRS</span><small>Ritual</small></button>
+          <button class="mode-btn" data-pairs="20"><strong>20</strong><span>PAIRS</span><small>Abyss</small></button>
+        </div>
+        <button id="beginBtn" class="primary-btn" disabled>BEGIN THE RITUAL</button>
+      </div>
+
+      <div class="menu-actions">
+        <button id="scoresBtn" class="text-btn">HIGH SCORES</button>
+        <button id="codexBtn" class="text-btn">CURSED CODEX <span id="codexCount">0/51</span></button>
+        <button id="soundBtn" class="text-btn">SOUND: ON</button>
+      </div>
+      <p class="footer-note">ESC pause · M mute · progress saves locally</p>
+    </section>
+
+    <section id="gameScreen" class="screen game-screen" aria-label="Game board">
+      <header class="game-header">
+        <button id="backBtn" class="icon-btn" aria-label="Return to menu">←</button>
+        <div class="game-brand"><small>THE FORBIDDEN DECK</small><strong>SINISTER MEMORY</strong></div>
+        <button id="pauseBtn" class="icon-btn" aria-label="Pause game">Ⅱ</button>
+      </header>
+
+      <div class="hud">
+        <div class="stat"><small>TIME</small><strong id="timeText">00:00</strong></div>
+        <div class="stat"><small>MOVES</small><strong id="movesText">0</strong></div>
+        <div class="stat"><small>PAIRS</small><strong><span id="matchText">0</span>/<span id="pairText">0</span></strong></div>
+        <div class="stat score-stat"><small>SCORE</small><strong id="scoreText">0</strong></div>
+      </div>
+
+      <div class="sanity-wrap">
+        <div class="sanity-title"><span>SANITY</span><strong id="sanityText">100%</strong></div>
+        <div id="sanityBar" class="sanity-bar" aria-label="Sanity level"></div>
+      </div>
+
+      <div id="board" class="board" aria-label="Matching cards"></div>
+      <p id="statusLine" class="status-line">The deck is watching.</p>
+    </section>
+  </main>
+
+  <div id="modal" class="modal hidden" role="dialog" aria-modal="true">
+    <div class="modal-card">
+      <button id="modalClose" class="modal-close" aria-label="Close">×</button>
+      <div id="modalContent"></div>
+    </div>
+  </div>
+
+  <div id="toast" class="toast" aria-live="polite"></div>
+  <script src="script.js"></script>
+</body>
+</html>
